@@ -17,7 +17,7 @@ os_security_users_allow: []
 # specify system accounts those login should not be disabled and password not changed
 os_ignore_users: ['vagrant', 'kitchen']
 os_security_kernel_enable_module_loading: true
-os_security_kernel_enable_core_dump: false
+os_security_kernel_enable_core_dump: true
 os_security_suid_sgid_enforce: true
 # user-defined blacklist and whitelist
 os_security_suid_sgid_blacklist: []
@@ -219,7 +219,7 @@ sysctl_config:
   # example via package removal (e.g. wine, dosemu).  Therefore, this value
   # is reset to the secure default each time the sysctl values are loaded.
   vm.mmap_min_addr: 65536
-          
+
   # These settings eliminate an entire class of security vulnerability:
   # time-of-check-time-of-use cross-privilege attacks using guessable
   # filenames (generally seen as "/tmp file race" vulnerabilities).
