@@ -218,7 +218,7 @@ sysctl_config:
   # restore the kernel default if the value is changed during runtime; for
   # example via package removal (e.g. wine, dosemu).  Therefore, this value
   # is reset to the secure default each time the sysctl values are loaded.
-  vm.mmap_min_addr: 65536
+  vm.mmap_min_addr: 65535
 
   # These settings eliminate an entire class of security vulnerability:
   # time-of-check-time-of-use cross-privilege attacks using guessable
